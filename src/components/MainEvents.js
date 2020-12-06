@@ -10,6 +10,7 @@ import Home from './Home'
 
 function MainEvents() {
 
+    // Добавь плз eslint и поправь им форматирование и стиль кода
     const [appState,setAppState]=useState({events:[]});
     const [descriptions, setDescriptions]=useState({descriptions:false})
     const [rate, setRate]= useState({rate:false})
