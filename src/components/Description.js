@@ -22,6 +22,7 @@ function Descriptions(props){
     <ul 
     className="btnRateContainer">
         {coefficient.map((coeff,i)=>(
+        // можем ли мы заменить пропс Rate состоянием этого компонента, т.е. использовать setState() ?
         <li key={i} onClick={()=>props.Rate(coeff)}><button className={classnames("btnRate",{"btnRateActive":coeff.click})} disabled={props.rate.click? true:false}>{coeff.title} </button></li>
         
     ))}</ul>
