@@ -8,14 +8,13 @@ import Home from './Home'
 
 
 
-
 function MainEvents() {
 
     const [appState,setAppState]=useState({events:[]});
     const [descriptions, setDescriptions]=useState({descriptions:false})
     const [rate, setRate]= useState({rate:false})
     const [current_rate,setCurrent]=useState({current:false})
-    const [click,setClick]=useState({click:[]})
+    const [click,setClick]=useState({click:[]}) // setClick плохое название, оно слишком общее, нажать можно куда угодно - надо более специфичное - типа setCurrentRate
     const [make_rate,setMakeRate]=useState(false)
   
     console.log(click)
@@ -68,6 +67,10 @@ console.log("rate",rate)
       </div>
       <Switch>
       <Route exact path="/" render={()=><Home events={appState.events} addDescription={addDescription} rate={rate.rate}  descriptions={descriptions.descriptions} current={current_rate.current} />}/>
+      // чем Rate отличается от rate?
+      // а make_rate от makeRate?
+      // 1. Следует избегать таких похожих названий переменных и функций - новый человек в них долго будет разбираться
+      // 2. и нужно ли здесь все эти пропсы вообще, может можно обойтись меньшим числом пропсов?
       <Route path="/descriptions" render={()=><Description descriptions={descriptions.descriptions} Rate={Rate} current={current_rate.current} rate={rate.rate} makeRate={makeRate} make_rate={make_rate}/>}/>
       </Switch>
     </div>
