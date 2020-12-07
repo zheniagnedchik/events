@@ -1,33 +1,72 @@
-import React from 'react'
-import "./Events.css"
-import { Link } from 'react-router-dom'
-import classnames from 'classnames'
-import clock from './clock.png'
+import React, { useState } from 'react';
+import './Events.css';
+import { Link } from 'react-router-dom';
+import classnames from 'classnames';
+import clock from './clock.png';
 
+function Descriptions(props) {
+  const prop = props;
+  const { descriptions } = prop;
+  const { coefficient } = descriptions;
+  const [selectBets, setSelectBet] = useState({ selectBet: false });
 
-function Descriptions(props){
+  function ActiveBet(coeff) {
+    const coef = coeff;
+    coef.click = true;
+    setSelectBet({ selectBet: coeff });
+  }
 
-    let descriptions = props.descriptions
-    let coefficient = descriptions.coefficient
-    console.log(props.rate)
-   
-    return(
+  return (
     <div className="dceriptionContainer">
+      <h1 className="descriptionTitle">
+        {descriptions.title}
+      </h1>
+      <div className="clockContainer">
+        <div style={
+            {
+              backgroundImage: `url(${clock})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', width: '20px', height: '20px',
+            }
 
-        <h1 className="descriptionTitle">{descriptions.title}</h1>
-    <div className="clockContainer">
-        <div style={{ backgroundImage:`url(${clock})`,backgroundSize: 'cover',backgroundRepeat: 'no-repeat'}} className="clockImg"></div>
-        <div className="clockTitle">{descriptions.data}</div>
+         }
+        />
+        <div className="clockTitle">
+          { descriptions.data }
+        </div>
+      </div>
+
+      <ul className="btnBetContainer">
+        {coefficient.map((coeff) => (
+          <li
+            key={coeff.title}
+          >
+            <button
+              type="submit"
+              className={classnames('btnBet', { btnBetActive: !!coeff.click })}
+              disabled={!!selectBets.selectBet.click}
+              onClick={() => ActiveBet(coeff)}
+            >
+              {' '}
+              { coeff.title }
+            </button>
+          </li>
+        ))}
+      </ul>
+      <div className="make">
+        <Link to="/">
+          <button
+            type="submit"
+            className="makeBet"
+            onClick={() => props.makeBet(selectBets)}
+            disabled={!selectBets.selectBet}
+          >
+            Сделать ставку
+          </button>
+        </Link>
+      </div>
+
     </div>
-    <ul 
-    className="btnRateContainer">
-        {coefficient.map((coeff,i)=>(
-        <li key={i} onClick={()=>props.Rate(coeff)}><button className={classnames("btnRate",{"btnRateActive":coeff.click})} disabled={props.rate.click? true:false}>{coeff.title} </button></li>
-        
-    ))}</ul>
-    <div className="make"><Link to={'/'} ><button className="makeRate"onClick={props.makeRate} disabled={props.make_rate.make_rate? false:true}>Сделать ставку </button></Link></div>
-    </div>
-    )
+
+  );
 }
 
-export default Descriptions
+export default Descriptions;

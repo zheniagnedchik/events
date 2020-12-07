@@ -1,16 +1,12 @@
-
-import './App.css';
-
-import MainEvents from './components/MainEvents'
-
-
-
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import MainEvents from './components/MainEvents';
 
 function App() {
   return (
-    <div >
-      <MainEvents/>
-    </div>
+    <Router>
+      <MainEvents />
+    </Router>
   );
 }
 

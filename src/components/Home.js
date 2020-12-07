@@ -1,28 +1,32 @@
-import React from 'react'
-import "./Events.css"
-import classnames from 'classnames'
+import React from 'react';
+import './Events.css';
+import classnames from 'classnames';
+import { Link } from 'react-router-dom';
 
-import { Link} from 'react-router-dom'
+function Home(props) {
+  const propHome = props;
+  return (
+    <div>
+      <div className={classnames({ showBet: propHome.showBet })}>
+        { propHome.showBet ? ['Ваша стака [', propHome.showBet.title, '] на команду [', propHome.descriptions.title, '] Принята'] : '' }
+      </div>
+      <h1 className="homeTitle">Список событий</h1>
+      <ul className="border">
+        {
+              propHome.events.map((event) => (
+                <Link
+                  to="/descriptions"
+                  key={event.id}
+                  onClick={() => propHome.addDescription(event)}
+                >
+                  <li className="test">{event.title}</li>
+                </Link>
+              ))
+            }
 
-
-
-function Home(props){
-    return(
-
-        <div>
-             <div className= {classnames({"currentRate":props.current})}>{ props.current ? ["Ваша стака [", props.rate.title , "] на команду [", props.descriptions.title, "] Принята"] : ''}</div>
-            <h1 className="homeTitle">
-                Список событий
-            </h1>
-             <ul className="border">
-          {props.events.map((event,i)=>(
-          <Link to={'/descriptions'} >  <li key={event.id} onClick={()=>props.addDescription(event)} className="test">{event.title}</li></Link>
-              
-          ))}
       </ul>
-         
-        </div>
-    )
+    </div>
+  );
 }
 
-export default Home
+export default Home;

@@ -1,144 +1,138 @@
-*{
+* {
     max-width: 1440px;
     margin: 0 auto;
 }
-li{
+
+li {
     list-style: none;
 }
-button{
+
+button {
     outline: none;
     border: none;
-    
 }
-a{
+
+a {
     text-decoration: none;
 }
 
-
-.border  {
+.border {
     padding: 0;
     margin-top: 70px;
 }
-.test{  
-        width: 80%;
-        font-family: "Trebuchet MS", "Lucida Sans";
-        padding: 7px 20px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        border-left: 10px solid #f05d22; 
-        box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
-             -2px -2px 5px 0 rgba(0,0,0,.1),
-            2px 2px 5px 0 rgba(0,0,0,.1),
-            -2px 2px 5px 0 rgba(0,0,0,.1);
-        font-size: 20px;
-        color: #4C4C4E;
-        letter-spacing: 2px;
-        transition: 0.3s all linear;
-        }
-  .homeTitle{
-      text-align: center; 
-      margin-top: 70px;
-      color: #4C4C4E;
-    }
-  
-    .descriptionTitle{
-        text-align: center; 
-      margin-top: 70px;
-      color: #4C4C4E;
-    }
-    .clockContainer{
-        display: flex;
-        align-items: center;
-        border-radius: 10px;
-        width: 40%;
-        height: 40px;
-        margin-top: 20px;
-        background: linear-gradient(rgb(110,112,120), rgb(81,81,86)) rgb(110,112,120);;
-    }
-    .clockImg{
-        width: 20px;
-        height: 20px;
-        
-    }
-    .clockTitle{
-        color: rgb(209,209,217);
-       
-    }
-    .btnRate {
-        width: 100px;
-        height: 50px;
-        position: relative;
-        display: inline-block;
-        font-size: 90%;
-        font-weight: 700;
-        color: rgb(209,209,217);
-        text-decoration: none;
-        text-shadow: 0 -1px 2px rgba(0,0,0,.2);
-        padding: .5em 1em;
-        outline: none;
-        border-radius: 3px;
-        background: linear-gradient(rgb(110,112,120), rgb(81,81,86)) rgb(110,112,120);
-        box-shadow:
-         0 1px rgba(255,255,255,.2) inset,
-         0 3px 5px rgba(0,1,6,.5),
-         0 0 1px 1px rgba(0,1,6,.2);
-        
-      }
- 
-      .btnRateContainer{
-          display: flex;
-          width: 50%;
-          justify-content: center;
-          padding: 0;
-          margin-top: 20px;
-      }
-      .makeRate {
-       
-        width: 300px;
-        
-        height: 50px;
-        
-        display: inline-block;
-        font-size: 90%;
-        font-weight: 700;
-        color: rgb(209,209,217);
-        text-decoration: none;
-        text-shadow: 0 -1px 2px rgba(0,0,0,.2);
-        padding: .5em 1em;
-        outline: none;
-        border-radius: 3px;
-        background: green;
-        box-shadow:
-         0 1px rgba(255,255,255,.2) inset,
-         0 3px 5px rgba(0,1,6,.5),
-         0 0 1px 1px rgba(0,1,6,.2);
-        transition: .2s ease-in-out;
-      }
-      .makeRate:disabled{
-          background: grey;
-          box-shadow:none;
-          
-      }
-    
-    
-      .make{
-          display: flex;
-          margin-top: 20px;
-          justify-content: center;
-          width: 100%;
-      }
-      .btnRateActive{
-          background: #f05d22;
-      }
-      .currentRate{
-          text-align: center;
-          width: 300px;
-          background-color: green;
-          padding-top: 20px;
-          padding-bottom: 20px;
-          border-radius: 15px;
-          color: aliceblue;
-          font-weight: bold;
-          margin-top: 20px;
-      }
-      
+
+.test {
+    width: 80%;
+    font-family: "Trebuchet MS", "Lucida Sans";
+    padding: 7px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 10px solid #f05d22;
+    box-shadow: 2px -2px 5px 0 rgba(0, 0, 0, .1), -2px -2px 5px 0 rgba(0, 0, 0, .1), 2px 2px 5px 0 rgba(0, 0, 0, .1), -2px 2px 5px 0 rgba(0, 0, 0, .1);
+    font-size: 20px;
+    color: #4C4C4E;
+    letter-spacing: 2px;
+    transition: 0.3s all linear;
+}
+
+.homeTitle {
+    text-align: center;
+    margin-top: 70px;
+    color: #4C4C4E;
+}
+
+.descriptionTitle {
+    text-align: center;
+    margin-top: 70px;
+    color: #4C4C4E;
+}
+
+.clockContainer {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 40%;
+    height: 40px;
+    margin-top: 20px;
+    background: linear-gradient(rgb(110, 112, 120), rgb(81, 81, 86)) rgb(110, 112, 120);
+    ;
+}
+
+.clockImg {
+    width: 20px;
+    height: 20px;
+}
+
+.clockTitle {
+    color: rgb(209, 209, 217);
+}
+
+.btnBet {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    display: inline-block;
+    font-size: 90%;
+    font-weight: 700;
+    color: rgb(209, 209, 217);
+    text-decoration: none;
+    text-shadow: 0 -1px 2px rgba(0, 0, 0, .2);
+    padding: .5em 1em;
+    outline: none;
+    border-radius: 3px;
+    background: linear-gradient(rgb(110, 112, 120), rgb(81, 81, 86)) rgb(110, 112, 120);
+    box-shadow: 0 1px rgba(255, 255, 255, .2) inset, 0 3px 5px rgba(0, 1, 6, .5), 0 0 1px 1px rgba(0, 1, 6, .2);
+}
+
+.btnBetContainer {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.makeBet {
+    width: 300px;
+    height: 50px;
+    display: inline-block;
+    font-size: 90%;
+    font-weight: 700;
+    color: rgb(209, 209, 217);
+    text-decoration: none;
+    text-shadow: 0 -1px 2px rgba(0, 0, 0, .2);
+    padding: .5em 1em;
+    outline: none;
+    border-radius: 3px;
+    background: green;
+    box-shadow: 0 1px rgba(255, 255, 255, .2) inset, 0 3px 5px rgba(0, 1, 6, .5), 0 0 1px 1px rgba(0, 1, 6, .2);
+    transition: .2s ease-in-out;
+}
+
+.makeBet:disabled {
+    background: grey;
+    box-shadow: none;
+}
+
+.make {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.btnBetActive {
+    background: #f05d22;
+}
+
+.showBet {
+    text-align: center;
+    width: 300px;
+    background-color: green;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    color: aliceblue;
+    font-weight: bold;
+    margin-top: 20px;
+}
