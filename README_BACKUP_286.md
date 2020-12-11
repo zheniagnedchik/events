@@ -1,6 +1,8 @@
-
+<<<<<<< HEAD
+MASTER   TEXT
+=======
 MASTER TEXT TEST
-
+>>>>>>> test
 
 # Demo https://events-b585b.web.app/
 
