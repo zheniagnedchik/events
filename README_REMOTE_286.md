@@ -1,6 +1,4 @@
-
 MASTER TEXT TEST
-
 
 # Demo https://events-b585b.web.app/
 
